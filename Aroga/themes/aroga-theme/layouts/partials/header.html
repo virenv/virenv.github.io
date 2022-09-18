@@ -1,0 +1,19 @@
+<header class="d-flex flex-row justify-content-center md-justify-content-flex-start relative mb-1p75">
+
+    <button class="d-block d-md-none absolute left-0 position-v-center primary-background border-circle text-primary-icon-color d-flex justify-content-center align-items-center pointer" type="button" data-type="icon">
+        <i class="icon-menu"></i>
+    </button>
+
+    <a href="{{ .Site.BaseURL }}">
+        <img src="{{ .Site.Params.logo }}" alt="{{ .Site.Title }} Logo" />
+    </a>
+
+    <ul class="menu m-0 p-1">
+        {{ range .Site.Menus.main }}
+        <li class="mb-0p562">
+            <a href="{{ .URL }}" class="fs-p83 lh-1 fw-500">{{ .Name }}</a>
+        </li>
+        {{ end }}
+    </ul>
+
+</header>

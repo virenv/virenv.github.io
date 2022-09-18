@@ -1,0 +1,21 @@
+{{ with .Site.Params.subscribe }}
+<div class="subscribe py-2p875 border-1p375 mb-4p75 md-border-3p5">
+    <div class="subscribe__subtitle text-center fw-500 fs-1 lh-1p5 text-subtitle-color mb-0p562 md-fs-1p44 md-lh-1p5 md-mb-p5">
+        {{ .subtitle }}
+    </div>
+    <div class="subscribe__heading text-center fw-700 fs-1p728 lh-2 mb-1p9375 md-fs-2p5 md-lh-3p5 md-mb-3">{{ .heading
+        }}
+    </div>
+
+    <div class="d-flex">
+        <div class="col-12 col-md-6 md-mx-auto d-flex flex-column md-flex-row">
+            <div class="subscribe__input-wrapper px-1 mb-1 flex-grow-1">
+                <input type="email" name="email" placeholder="Your Email" class="subscribe__input fs-1 lh-1p5 px-1"/>
+            </div>
+            <button type="button" class="btn btn-action fs-1p125 lh-1p5 border-1 px-2p1875 d-block mx-auto">{{ .action
+                }}
+            </button>
+        </div>
+    </div>
+</div>
+{{ end }}

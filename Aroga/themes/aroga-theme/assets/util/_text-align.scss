@@ -1,0 +1,10 @@
+.text-center {
+  text-align: center;
+}
+
+@include on-md-to-xl() {
+
+  .md-text-left {
+    text-align: left;
+  }
+}

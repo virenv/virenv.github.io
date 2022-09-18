@@ -1,0 +1,50 @@
+{{ with .Site.Params.reviews }}
+
+{{ $items := (.list | len) }}
+{{ $containerWidth := mul $items 100 }}
+{{ $itemWidth := div 100.0 $items }}
+
+<div class="reviews d-flex flex-column mb-1p75 md-border-4 d-flex flex-column md-flex-row justify-content-center align-items-center">
+
+    <div class="col-12 col-md-6">
+        <div class="md-w-60 md-mx-auto">
+            <div class="reviews__subtitle text-center md-text-left fw-500 fs1 lh-1p5 text-subtitle-color mb-0p375 md-fs-1p44 md-black md-mb-p5">{{ .subtitle }}
+            </div>
+            <div class="reviews__heading text-center md-text-left fw-700 fs-1p728 lh-2 mb-1p75 md-fs-2p488 md-lh-2p5">{{ .heading }}</div>
+        </div>
+    </div>
+
+    <div class="slider col-12 col-md-6">
+        <div class="reviews__container border-1p375">
+            <ul class="slider__container d-flex flex-row p-0 m-0 " style="width : {{ $containerWidth }}%">
+
+                {{ range $index, $slide := .list }}
+                <li class="d-flex flex-column slide {{ if eq $index 0 }} active {{ end }} px-2p1875 py-2"
+                    data-index="{{ $index }}" style="width: {{ $itemWidth }}%">
+                    <div class="reviewer__image mb-1p5 md-mb-2">
+                        {{ if .image }}
+                        <img src="{{ .image }}" alt="{{ .name }}'s Photo" class="border-circle image-responsive"/>
+                        {{ else }}
+                        <i class="icon-user"></i>
+                        {{ end }}
+                    </div>
+                    <div class="reviewer__name fw-500 fs-1p44 lh-1p5 mb-0p562 md-fs-2p07375 md-mb-p75">{{ .name }}</div>
+                    <div class="reviewer__comment fw-500 fs-1 lh-1p5 mb-2 md-fs-1p2 md-lh-1p5">{{ .review }}</div>
+                </li>
+                {{ end }}
+
+            </ul>
+
+            <ol class="slider__controls p-0 m-0 d-flex flex-row justify-content-center md-justify-content-flex-start mb-3p125 md-px-2p1875">
+                <li class="pointer previous slider__control fs-1 px-0p7 py-0p5 border-circle">
+                    <i class="icon-chevron-left"></i>
+                </li>
+                <li class="pointer next slider__control fs-1 px-0p7 py-0p5 border-circle">
+                    <i class="icon-chevron-right"></i>
+                </li>
+            </ol>
+
+        </div>
+    </div>
+</div>
+{{ end }}

@@ -1,0 +1,16 @@
+main:
+  - name: "Home"
+    url: "/"
+    weight: 10
+  - name: "About Us"
+    url: "/about-us"
+    weight: 20
+  - name: "Journey"
+    url: "/journey"
+    weight: 30
+  - name: "Blogs"
+    url: "/blogs"
+    weight: 40
+  - name: "Aroga Living Farms"
+    url: "/aroga-living-farms"
+    weight: 50

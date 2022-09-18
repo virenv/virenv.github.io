@@ -1,0 +1,27 @@
+{{ $items := (.context.Site.Params.slides | len) }}
+{{ $containerWidth := mul $items 100 }}
+{{ $itemWidth := div 100.0 $items }}
+<div class="slider relative mb-2p625 md-mb-4p75">
+    <ul class="slider__container  p-0 m-0 d-flex flex-row" style="width : {{ $containerWidth }}%">
+
+        {{ range $index, $slide := .context.Site.Params.slides }}
+        <li data-index="{{ $index }}" style="width: {{ $itemWidth }}%" {{ if eq $index 0 }} class="active" {{ end }}>
+            <img srcset="{{ .mobile }} 480w,
+                             {{ .desktop }} 800w"
+                 sizes="(max-width: 600px) 480px, 800px" 
+                 alt="{{ .alt }}"
+                 class="slide"/>
+        </li>
+        {{ end }}
+
+    </ul>
+
+    <ol class="slider__navigator absolute bottom-10 left-50 translateX--50 d-flex flex-row">
+        {{ range $index, $slide := .context.Site.Params.slides }}
+        <li class="border-circle pointer {{ if eq $index 0 }} active {{ end }}">
+            <a href="#" class="slider-pointer"></a>
+        </li>
+        {{ end }}
+    </ol>
+
+</div>

@@ -1,0 +1,48 @@
+.slider {
+  overflow: hidden;
+
+  &__container {
+
+    transition: transform .5s;
+
+    .slide {
+      width: 100%;
+    }
+
+  }
+
+  &__navigator {
+    list-style: none;
+
+    li {
+      height: 0.625rem;
+      width: 0.625rem;
+      background-color: rgba(255, 255, 255, 0.8);
+
+      &.active {
+        background-color: #DCB026;
+      }
+
+      + li {
+        margin-left: 1rem;;
+      }
+    }
+
+  }
+
+  &__controls {
+    list-style: none;
+  }
+
+  &__control {
+    font-size: 1rem;
+    border: 2px solid;
+    margin-right: 0.5rem;
+  }
+
+  &__control + &__control {
+    margin-left: 0.5rem;
+    margin-right: 0;
+  }
+
+}

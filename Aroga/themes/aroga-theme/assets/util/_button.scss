@@ -1,0 +1,25 @@
+button[data-type="icon"] {
+  border: 0;
+  height: 2.25rem;
+  width: 2.25rem;
+}
+
+.btn {
+  padding: 0.625rem 0.9375rem;
+  border: transparent;
+  cursor: pointer;
+  border-radius: 0.1875rem;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background-color: #DCB026;
+  color: white;
+  line-height: 1.245rem;
+  font-size: 1.0625rem;
+}
+
+.btn-action {
+  background-color: $primary-action-button-color;
+  color: white;
+}

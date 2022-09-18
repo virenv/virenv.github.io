@@ -1,0 +1,49 @@
+.p-0 {
+  padding: 0;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+
+.px-0p7 {
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+}
+
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.px-1p3125 {
+  padding-left: 1.3125rem;
+  padding-right: 1.3125rem;
+}
+
+.px-2p1875 {
+  padding-left: 2.1875rem;
+  padding-right: 2.1875rem;
+}
+
+.py-0p5 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-2 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-2p875 {
+  padding-top: 2.875rem;
+  padding-bottom: 2.875rem;
+}
+
+@include on-md-to-xl() {
+  .md-px-2p1875 {
+    padding-left: 2.1875rem;
+    padding-right: 2.1875rem;
+  }
+}

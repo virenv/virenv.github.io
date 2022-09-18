@@ -1,0 +1,119 @@
+/**
+ * Font Weight
+ */
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+/**
+ * Font Size equivalent
+ * Though specifications are in rem, if you want to convert them into px, multiply rem value by 16.
+ * ================================================================================================
+ */
+.fs-p83 {
+  font-size: 0.83rem;
+}
+
+.fs-1 {
+  font-size: 1rem;
+}
+
+.fs-1p2 {
+  font-size: 1.2rem;
+}
+
+.fs-1p125 {
+  font-size: 1.125rem;
+}
+
+.fs-1p44 {
+  font-size: 1.44rem;
+}
+
+.fs-1p728 {
+  font-size: 1.728rem;
+}
+
+.fs-2p25 {
+  font-size: 2.25rem;
+}
+
+.fs-3p4375 {
+  font-size: 3.4375rem;
+}
+
+
+@include on-md-to-xl() {
+
+  .md-fs-1p2 {
+    font-size: 1.2rem;
+  }
+
+  .md-fs-1p44 {
+    font-size: 1.44rem;
+  }
+
+  .md-fs-1p728 {
+    font-size: 1.728rem;
+  }
+
+  .md-fs-2p07375 {
+    font-size: 2.07375rem;
+  }
+
+  .md-fs-2p488 {
+    font-size: 2.488rem;
+  }
+
+  .md-fs-2p5 {
+    font-size: 2.5rem;
+  }
+
+  .md-fs-4 {
+    font-size: 4rem;
+  }
+
+}
+
+/**
+ * Line Height
+ * Though specifications are in rem, if you want to convert them into px, multiply rem value by 16.
+ * ================================================================================================
+ */
+.lh-1 {
+  line-height: 1rem;
+}
+
+.lh-1p5 {
+  line-height: 1.5rem;
+}
+
+.lh-2 {
+  line-height: 2rem;
+}
+
+@include on-md-to-xl() {
+
+  .md-lh-1p5 {
+    line-height: 1.5rem;
+  }
+
+  .md-lh-2 {
+    line-height: 2rem;
+  }
+
+  .md-lh-2p5 {
+    line-height: 2.5rem;
+  }
+
+  .md-lh-3p5 {
+    line-height: 3.5rem;
+  }
+
+}
+
+

@@ -1,0 +1,14 @@
+/*
+ * Though specifications are in rem, if you want to convert them into px, multiply rem value by 16.
+ * ================================================================================================
+ */
+.container {
+  padding: 2.125rem 2.3125rem;
+}
+
+@media screen and (min-width: 1440px){
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}

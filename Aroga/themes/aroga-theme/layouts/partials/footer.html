@@ -1,0 +1,40 @@
+{{ $baseUrl := .Site.BaseURL }}
+{{ $siteLogo := .Site.Params.logo }}
+{{ with .Site.Params.footer }}
+<footer class="d-flex flex-row flex-wrap">
+    <div class="col-6 col-md-4 mb-2">
+
+        <a href="{{ $baseUrl }}" class="mb-1p25 d-block">
+            <img src="{{ $siteLogo }}" alt="{{ .Site.Title }} Logo"/>
+        </a>
+
+        <div class="copyright fs-p83 lh-1 text-subtitle-color mb-0p562">
+            ©{{ now.Format "2006" }} - All rights reserved
+        </div>
+
+        <ul class="social p-0 m-0 d-flex flex-row">
+            {{ range .social }}
+            <li>
+                <a href="{{ .link }}" class="fs-1p728 social__link mr-1">
+                    <i class="{{ .icon }}"></i>
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+
+    </div>
+
+    {{ range .menus }}
+    <div class="col-6 col-md-4">
+        <div class="menu__title fs-p83 lh-1 fw-500 mb-0p562">{{ .title }}</div>
+        <ul class="menu p-0 m-0">
+            {{ range .list }}
+            <li class="mb-0p562">
+                <a href="{{ .link }}" class="text-subtitle-color fs-p83 lh-1 fw-500">{{ .title }}</a>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
+    {{ end }}
+</footer>
+{{ end }}

@@ -1,0 +1,45 @@
+{{ with .Site.Params.journey }}
+<div class="journey d-flex flex-row flex-wrap mb-4">
+    <div class="col-12 col-md-6">
+        <div class="banner-wrapper">
+            <img srcset="{{ .banner.mobile }} 290w,
+                            {{ .banner.desktop }} 602w"
+                 sizes="(max-width: 600px) 480px, 800px"
+                 alt="{{ .banner.alt }}"
+                 class="image-responsive"
+            />
+        </div>
+    </div>
+    <div class="col-12 col-md-6 text-center md-text-left">
+        <div class="w-80 mx-auto">
+            <div class="journey-details-wrapper mb-4p25 md-mb-7p1875">
+                <div class="journey__heading mt-3p4375 fw-700 fs-1p728 lh-2 mb-0p6875 md-fs-2p488 md-md-1p5625 md-mb-1p5625 md-lh-2.5">
+                    {{ .heading }}
+                </div>
+                <div class="journey__subtitle fw-500 fs-1 lh-1p5 text-subtitle-color mb-1p75 md-fs-1p2 md-lh-1p5">{{
+                    .subtitle }}
+                </div>
+                <button class="btn btn-primary fs-1p44 lh-1p5">{{ .button.text }} <i
+                        class="d-md-none {{ .button.icon }} relative top-0p125"></i></button>
+            </div>
+
+            <div class="journey-specifics d-flex flex-row flex-wrap">
+                {{ range .details }}
+                <div class="fb-100 no-flex-shrink mb-4p25 d-flex flex-column md-flex-row">
+                    <div class="journey-specifics__icon--wrapper mb-1p25">
+                        <i class="fs-3p4375 {{ .icon }}"></i>
+                    </div>
+                    <div>
+                        <div class="journey-specifics__title fw-500 fs-1p44 lh-1p5 mb-1 primary-heading-color px-1p3125 md-fs-2p07375 md-lh-2p5  md-mb-1p23625">
+                            {{ .title }}
+                        </div>
+                        <div class="journey-specifics__subtitle fw-500 fs-1 lh-1p5 px-1p3125 md-fs-1p2 md-lh-1p5">{{ .subtitle }}</div>
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+
+    </div>
+</div>
+{{ end }}

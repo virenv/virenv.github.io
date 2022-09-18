@@ -1,0 +1,15 @@
+{{ define "main" }}
+
+<!--{{ partial "slider.html" (dict "context" . "items" "1" "height" "50" "unit" "%" "duration" "7000") }}-->
+
+{{ partial "section/landing-page/why-us.html" . }}
+{{ partial "section/landing-page/journey.html" . }}
+{{ partial "section/landing-page/reviews.html" . }}
+{{ partial "section/landing-page/subscribe.html" . }}
+
+{{ $carouselJs := resources.Get "js/carousel.js" }}
+{{ $menuToggle := resources.Get "js/xs-menu-toggle.js" }}
+{{ $js := slice $carouselJs $menuToggle | resources.Concat "js/bundle.js" }}
+<script src="{{ $js.Permalink }}" type="application/javascript"></script>
+
+{{ end }}

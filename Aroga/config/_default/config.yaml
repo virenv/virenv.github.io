@@ -1,0 +1,6 @@
+baseURL: 'https://explained.blog/'
+languageCode: 'en-us'
+title: 'Aroga'
+theme: 'aroga-theme'
+enableGitInfo: true
+menu:

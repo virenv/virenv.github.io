@@ -1,0 +1,17 @@
+.text-primary-icon-color {
+  color: $icon-text-color;
+}
+
+.text-subtitle-color {
+  color: $heading-subtitle-color;
+}
+
+.primary-heading-color {
+  color: $primary-heading-color;
+}
+
+.md-black {
+  @include on-md-to-xl() {
+    color: black;
+  }
+}

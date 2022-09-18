@@ -1,0 +1,65 @@
+
+/**
+ * Reviewer name color.
+ */
+$reviewer-name-color: #66572F;
+
+/**
+ * Reviewer Comment.
+ */
+$reviewer-comment-color: #483903;
+
+.reviews {
+
+  @include on-md-to-xl() {
+    background-color: #EBCE73;
+  }
+
+  &__container {
+    background-color: #EBCE73;
+
+    @include on-md-to-xl() {
+      background-color: transparent;
+    }
+  }
+
+}
+
+.reviewer {
+
+  &__image {
+    height: 3.5rem;
+    width: 3.5rem;
+
+    @include on-md-to-xl() {
+      height: 7.0625rem;
+      width: 7.0625rem;
+    }
+
+    img {
+      padding: 0.0625rem;
+      border: 1px solid black;
+    }
+
+    .icon-user {
+      font-size: 2.2rem;
+      border: 1px solid black;
+      border-radius: 50%;
+      padding: 0.5rem;
+
+      @include on-md-to-xl() {
+        font-size: 4rem;
+      }
+    }
+
+  }
+
+  &__name {
+    color: $reviewer-name-color;
+  }
+
+  &__comment {
+    color: $reviewer-comment-color;
+  }
+
+}

@@ -1,0 +1,21 @@
+.why-us {
+
+  &__reasons {
+
+    &--reason {
+
+      &__icon {
+        height: 4rem;
+        width: 4rem;
+
+        @include on-md-to-xl() {
+          height: 6rem;
+          width: 6rem;
+        }
+      }
+
+    }
+
+  }
+
+}

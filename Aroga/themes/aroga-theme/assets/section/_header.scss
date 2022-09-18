@@ -1,0 +1,44 @@
+header {
+
+  ul.menu {
+    list-style: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: white;
+
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 7px;
+
+    display: none;
+
+    @include on-md-to-xl() {
+      position: static;
+      background-color: transparent;
+      box-shadow: none;
+      margin-left: auto;
+      display: block;
+
+      li {
+        display: inline-block;
+        font-size: 1.44rem;
+        line-height: 1.5rem;
+        margin-left: 3rem;
+      }
+
+    }
+
+    a {
+      color: #474747;
+      text-decoration: none;
+    }
+  }
+
+  &.open {
+    ul {
+      display: block;
+    }
+  }
+
+}

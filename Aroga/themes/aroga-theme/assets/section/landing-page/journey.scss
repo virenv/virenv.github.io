@@ -1,0 +1,7 @@
+.journey {
+  background-color: rgb(249, 247, 242);
+
+  @include on-md-to-xl() {
+    background-color: transparent;
+  }
+}
